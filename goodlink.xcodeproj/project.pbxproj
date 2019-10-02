@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9122B4B232ECBE70051A903 /* goodlink.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F9122B4A232ECBE70051A903 /* goodlink.entitlements */; };
+		F9122B4D232ECBE70051A903 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9122B4C232ECBE70051A903 /* AppDelegate.swift */; };
+		F9122B50232ECBE70051A903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9122B4E232ECBE70051A903 /* Main.storyboard */; };
+		F9122B52232ECBE70051A903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9122B51232ECBE70051A903 /* ViewController.swift */; };
+		F9122B54232ECBE90051A903 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9122B53232ECBE90051A903 /* Assets.xcassets */; };
+		F9122B5B232ECBE90051A903 /* goodlink Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F9122B5A232ECBE90051A903 /* goodlink Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9122B60232ECBE90051A903 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9122B5F232ECBE90051A903 /* Cocoa.framework */; };
+		F9122B63232ECBE90051A903 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9122B62232ECBE90051A903 /* SafariExtensionHandler.swift */; };
+		F9122B65232ECBE90051A903 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9122B64232ECBE90051A903 /* SafariExtensionViewController.swift */; };
+		F9122B68232ECBE90051A903 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9122B66232ECBE90051A903 /* SafariExtensionViewController.xib */; };
+		F9122B6B232ECBE90051A903 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = F9122B6A232ECBE90051A903 /* script.js */; };
+		F9122B6D232ECBE90051A903 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9122B6C232ECBE90051A903 /* ToolbarItemIcon.pdf */; };
+		F99919382344888000044B5D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99919372344888000044B5D /* Secrets.swift */; };
+		F999193C23448AAA00044B5D /* BookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999193B23448AAA00044B5D /* BookRequest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9122B5C232ECBE90051A903 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9122B3F232ECBE70051A903 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9122B59232ECBE90051A903;
+			remoteInfo = "goodlink Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9122B74232ECBE90051A903 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F9122B5B232ECBE90051A903 /* goodlink Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F9122B47232ECBE70051A903 /* goodlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goodlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9122B4A232ECBE70051A903 /* goodlink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = goodlink.entitlements; sourceTree = "<group>"; };
+		F9122B4C232ECBE70051A903 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9122B4F232ECBE70051A903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9122B51232ECBE70051A903 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9122B53232ECBE90051A903 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9122B55232ECBE90051A903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9122B5A232ECBE90051A903 /* goodlink Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "goodlink Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9122B5F232ECBE90051A903 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F9122B62232ECBE90051A903 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		F9122B64232ECBE90051A903 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		F9122B67232ECBE90051A903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		F9122B69232ECBE90051A903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9122B6A232ECBE90051A903 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		F9122B6C232ECBE90051A903 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		F9122B6E232ECBE90051A903 /* goodlink_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = goodlink_Extension.entitlements; sourceTree = "<group>"; };
+		F99919372344888000044B5D /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		F999193B23448AAA00044B5D /* BookRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRequest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9122B44232ECBE70051A903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9122B57232ECBE90051A903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9122B60232ECBE90051A903 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9122B3E232ECBE70051A903 = {
+			isa = PBXGroup;
+			children = (
+				F9122B49232ECBE70051A903 /* goodlink */,
+				F9122B61232ECBE90051A903 /* goodlink Extension */,
+				F9122B5E232ECBE90051A903 /* Frameworks */,
+				F9122B48232ECBE70051A903 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9122B48232ECBE70051A903 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9122B47232ECBE70051A903 /* goodlink.app */,
+				F9122B5A232ECBE90051A903 /* goodlink Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9122B49232ECBE70051A903 /* goodlink */ = {
+			isa = PBXGroup;
+			children = (
+				F9122B4A232ECBE70051A903 /* goodlink.entitlements */,
+				F9122B4C232ECBE70051A903 /* AppDelegate.swift */,
+				F9122B4E232ECBE70051A903 /* Main.storyboard */,
+				F9122B51232ECBE70051A903 /* ViewController.swift */,
+				F9122B53232ECBE90051A903 /* Assets.xcassets */,
+				F9122B55232ECBE90051A903 /* Info.plist */,
+			);
+			path = goodlink;
+			sourceTree = "<group>";
+		};
+		F9122B5E232ECBE90051A903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9122B5F232ECBE90051A903 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9122B61232ECBE90051A903 /* goodlink Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F9122B62232ECBE90051A903 /* SafariExtensionHandler.swift */,
+				F9122B64232ECBE90051A903 /* SafariExtensionViewController.swift */,
+				F9122B66232ECBE90051A903 /* SafariExtensionViewController.xib */,
+				F9122B69232ECBE90051A903 /* Info.plist */,
+				F9122B6A232ECBE90051A903 /* script.js */,
+				F9122B6C232ECBE90051A903 /* ToolbarItemIcon.pdf */,
+				F9122B6E232ECBE90051A903 /* goodlink_Extension.entitlements */,
+				F99919372344888000044B5D /* Secrets.swift */,
+				F999193B23448AAA00044B5D /* BookRequest.swift */,
+			);
+			path = "goodlink Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9122B46232ECBE70051A903 /* goodlink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9122B75232ECBE90051A903 /* Build configuration list for PBXNativeTarget "goodlink" */;
+			buildPhases = (
+				F9122B43232ECBE70051A903 /* Sources */,
+				F9122B44232ECBE70051A903 /* Frameworks */,
+				F9122B45232ECBE70051A903 /* Resources */,
+				F9122B74232ECBE90051A903 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9122B5D232ECBE90051A903 /* PBXTargetDependency */,
+			);
+			name = goodlink;
+			productName = goodlink;
+			productReference = F9122B47232ECBE70051A903 /* goodlink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9122B59232ECBE90051A903 /* goodlink Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9122B71232ECBE90051A903 /* Build configuration list for PBXNativeTarget "goodlink Extension" */;
+			buildPhases = (
+				F9122B56232ECBE90051A903 /* Sources */,
+				F9122B57232ECBE90051A903 /* Frameworks */,
+				F9122B58232ECBE90051A903 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "goodlink Extension";
+			productName = "goodlink Extension";
+			productReference = F9122B5A232ECBE90051A903 /* goodlink Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9122B3F232ECBE70051A903 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Ratik Sharma";
+				TargetAttributes = {
+					F9122B46232ECBE70051A903 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					F9122B59232ECBE90051A903 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = F9122B42232ECBE70051A903 /* Build configuration list for PBXProject "goodlink" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9122B3E232ECBE70051A903;
+			productRefGroup = F9122B48232ECBE70051A903 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9122B46232ECBE70051A903 /* goodlink */,
+				F9122B59232ECBE90051A903 /* goodlink Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9122B45232ECBE70051A903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9122B4B232ECBE70051A903 /* goodlink.entitlements in Resources */,
+				F9122B54232ECBE90051A903 /* Assets.xcassets in Resources */,
+				F9122B50232ECBE70051A903 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9122B58232ECBE90051A903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9122B6D232ECBE90051A903 /* ToolbarItemIcon.pdf in Resources */,
+				F9122B68232ECBE90051A903 /* SafariExtensionViewController.xib in Resources */,
+				F9122B6B232ECBE90051A903 /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9122B43232ECBE70051A903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9122B52232ECBE70051A903 /* ViewController.swift in Sources */,
+				F9122B4D232ECBE70051A903 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9122B56232ECBE90051A903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9122B65232ECBE90051A903 /* SafariExtensionViewController.swift in Sources */,
+				F99919382344888000044B5D /* Secrets.swift in Sources */,
+				F999193C23448AAA00044B5D /* BookRequest.swift in Sources */,
+				F9122B63232ECBE90051A903 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9122B5D232ECBE90051A903 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9122B59232ECBE90051A903 /* goodlink Extension */;
+			targetProxy = F9122B5C232ECBE90051A903 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9122B4E232ECBE70051A903 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9122B4F232ECBE70051A903 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9122B66232ECBE90051A903 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9122B67232ECBE90051A903 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9122B6F232ECBE90051A903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9122B70232ECBE90051A903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F9122B72232ECBE90051A903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "goodlink Extension/goodlink_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "goodlink Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ratik.goodlink-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F9122B73232ECBE90051A903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "goodlink Extension/goodlink_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "goodlink Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ratik.goodlink-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F9122B76232ECBE90051A903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = goodlink/goodlink.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = goodlink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ratik.goodlink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F9122B77232ECBE90051A903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = goodlink/goodlink.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = goodlink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ratik.goodlink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9122B42232ECBE70051A903 /* Build configuration list for PBXProject "goodlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9122B6F232ECBE90051A903 /* Debug */,
+				F9122B70232ECBE90051A903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9122B71232ECBE90051A903 /* Build configuration list for PBXNativeTarget "goodlink Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9122B72232ECBE90051A903 /* Debug */,
+				F9122B73232ECBE90051A903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9122B75232ECBE90051A903 /* Build configuration list for PBXNativeTarget "goodlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9122B76232ECBE90051A903 /* Debug */,
+				F9122B77232ECBE90051A903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9122B3F232ECBE70051A903 /* Project object */;
+}
