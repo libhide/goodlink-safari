@@ -19,8 +19,8 @@
 		F9122B68232ECBE90051A903 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9122B66232ECBE90051A903 /* SafariExtensionViewController.xib */; };
 		F9122B6B232ECBE90051A903 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = F9122B6A232ECBE90051A903 /* script.js */; };
 		F9122B6D232ECBE90051A903 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F9122B6C232ECBE90051A903 /* ToolbarItemIcon.pdf */; };
-		F99919382344888000044B5D /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99919372344888000044B5D /* Secrets.swift */; };
-		F999193C23448AAA00044B5D /* BookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999193B23448AAA00044B5D /* BookRequest.swift */; };
+		F9C66A542344FD0000F8F942 /* BookRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999193B23448AAA00044B5D /* BookRequest.swift */; };
+		F9C66A552344FD0300F8F942 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99919372344888000044B5D /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +130,8 @@
 		F9122B61232ECBE90051A903 /* goodlink Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F99919372344888000044B5D /* Secrets.swift */,
+				F999193B23448AAA00044B5D /* BookRequest.swift */,
 				F9122B62232ECBE90051A903 /* SafariExtensionHandler.swift */,
 				F9122B64232ECBE90051A903 /* SafariExtensionViewController.swift */,
 				F9122B66232ECBE90051A903 /* SafariExtensionViewController.xib */,
@@ -137,8 +139,6 @@
 				F9122B6A232ECBE90051A903 /* script.js */,
 				F9122B6C232ECBE90051A903 /* ToolbarItemIcon.pdf */,
 				F9122B6E232ECBE90051A903 /* goodlink_Extension.entitlements */,
-				F99919372344888000044B5D /* Secrets.swift */,
-				F999193B23448AAA00044B5D /* BookRequest.swift */,
 			);
 			path = "goodlink Extension";
 			sourceTree = "<group>";
@@ -194,6 +194,11 @@
 				TargetAttributes = {
 					F9122B46232ECBE70051A903 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					F9122B59232ECBE90051A903 = {
 						CreatedOnToolsVersion = 10.3;
@@ -257,9 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9122B65232ECBE90051A903 /* SafariExtensionViewController.swift in Sources */,
-				F99919382344888000044B5D /* Secrets.swift in Sources */,
-				F999193C23448AAA00044B5D /* BookRequest.swift in Sources */,
+				F9C66A552344FD0300F8F942 /* Secrets.swift in Sources */,
 				F9122B63232ECBE90051A903 /* SafariExtensionHandler.swift in Sources */,
+				F9C66A542344FD0000F8F942 /* BookRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

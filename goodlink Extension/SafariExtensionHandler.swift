@@ -8,33 +8,70 @@
 
 import SafariServices
 
+// https://github.com/otzbergnet/libHelper/blob/master/Open%20Access%20Helper%20Safari/SafariExtensionHandler.swift
+
 class SafariExtensionHandler: SFSafariExtensionHandler {
-    var goodreadsUrl = ""
+    var isbn = ""
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
-        page.getPropertiesWithCompletionHandler { properties in
-            NSLog("The extension received a message (\(messageName)) from a script injected into (\(properties?.url)) with userInfo (\(userInfo))")
-        }
-        if (messageName == "FetchGoodreadsURL") {
-            page.getPropertiesWithCompletionHandler { properties in
-                print("The extension received a message (\(messageName)) from a script injected into (\(properties?.url)) with userInfo (\(userInfo))")
+        if (messageName == "BookPage") {
+            enableToolbar()
+            if let message = userInfo {
+                self.isbn = message["isbn"] as! String
             }
+        } else if (messageName == "NotABookPage") {
+            disableToolbar()
         }
-        
-        // let bookRequest = BookRequest()
     }
     
     override func toolbarItemClicked(in window: SFSafariWindow) {
-        // This method will be called when your toolbar item is clicked.
-        NSLog("The extension's toolbar item was clicked")
+        let bookRequest = BookRequest(isbn: self.isbn)
+        bookRequest.getBookUrl { result in
+            switch result {
+            case .failure(_):
+                NSLog("Failed to get Book URL")
+            case .success(let url):
+                self.openGoodreads(window: window, url: url)
+            }
+        }
+    }
+
+    func openGoodreads(window: SFSafariWindow, url: String) {
+        window.getActiveTab { activeTab in
+            activeTab?.getActivePage { activePage in
+                activePage?.getPropertiesWithCompletionHandler( { properties in
+                    activePage?.dispatchMessageToScript(withName: "OpenGR", userInfo: ["url": url])
+                })
+            }
+        }
     }
     
-    override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
-        // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
-        validationHandler(true, "")
+    func fetchBookUrl(window: SFSafariWindow) {
+        let API_KEY = "CySWpMKIMy8hbEhfMicvQ"
+        let resourceString = "https://www.goodreads.com/book/isbn_to_id?key=\(API_KEY)&isbn=\(self.isbn)"
+        guard let resourceURL = URL(string: resourceString) else {fatalError()}
+        
+        let task = URLSession.shared.dataTask(with: resourceURL) { data, _, _ in
+            if let rawData = data {
+                let id = String(decoding: rawData, as: UTF8.self)
+                    .components(separatedBy: "\n")
+                    .first!
+                let showURL = "https://www.goodreads.com/book/show/\(id)"
+                self.openGoodreads(window: window, url: showURL)
+            }
+        }
+        task.resume()
     }
     
-    override func popoverViewController() -> SFSafariExtensionViewController {
-        return SafariExtensionViewController.shared
+    func enableToolbar() {
+        SFSafariApplication.getActiveWindow { (window) in
+            window?.getToolbarItem { $0?.setEnabled(true) }
+        }
+    }
+    
+    func disableToolbar() {
+        SFSafariApplication.getActiveWindow { (window) in
+            window?.getToolbarItem { $0?.setEnabled(false) }
+        }
     }
 }

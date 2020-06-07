@@ -13,9 +13,17 @@ const isBookPage = () => {
 
 document.addEventListener("DOMContentLoaded", function(event) {
     const bookPageCheck = isBookPage();
-    console.log(bookPageCheck);
-                          
     if (bookPageCheck.isBookPage) {
-        safari.extension.dispatchMessage("FetchGoodreadsURL", bookPageCheck);
+        safari.extension.dispatchMessage("BookPage", bookPageCheck);
+    } else {
+        safari.extension.dispatchMessage("NotABookPage");
     }
 });
+
+const handleMessage = async (event) => {
+    if (event.name == "OpenGR") {
+        console.log(event.message);
+    }
+};
+
+safari.self.addEventListener("message", handleMessage);
